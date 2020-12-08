@@ -1,4 +1,4 @@
-# home-me
+# iHome
 
 ## Project setup
 ```

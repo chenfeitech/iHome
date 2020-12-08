@@ -5,14 +5,8 @@ if (process.env.UNI_OPT_TREESHAKINGNG) {
 }
 
 if (
-  (
-    process.env.UNI_PLATFORM === 'app-plus' &&
-    process.env.UNI_USING_V8
-  ) ||
-  (
-    process.env.UNI_PLATFORM === 'h5' &&
-    process.env.UNI_H5_BROWSER === 'builtin'
-  )
+  process.env.UNI_PLATFORM === 'h5' &&
+  process.env.UNI_H5_BROWSER === 'builtin'
 ) {
   const path = require('path')
 

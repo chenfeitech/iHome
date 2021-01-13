@@ -1,15 +1,104 @@
 {
+	"easycom": {
+		"autoscan": true,
+		"custom": {
+			"^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
+		}
+	},
 	"pages": [{
 		"path": "pages/index/index",
 		"style": {
 			"navigationBarTitleText": "iHome",
 			"enablePullDownRefresh": true,
-			"usingComponents": {}
+			"usingComponents": {
+				"home-item": "/components/home-item/home-item"
+			}
 		}
 	}, {
 		"path": "pages/search/index",
 		"style": {
-			"navigationBarTitleText": "search",
+			"navigationBarTitleText": "Search",
+			"enablePullDownRefresh": false,
+			"usingComponents": {
+				"furniture-item": "/components/furniture-item/furniture-item"
+			}
+		}
+	}, {
+		"path": "pages/category/index",
+		"style": {
+			"navigationBarTitleText": "Category",
+			"enablePullDownRefresh": false,
+			"usingComponents": {}
+		}
+	}, {
+		"path": "pages/purchase/index",
+		"style": {
+			"navigationBarTitleText": "Shopping Trolley",
+			"enablePullDownRefresh": true,
+			"usingComponents": {}
+		}
+	}, {
+		"path": "pages/purchase/check-out",
+		"style": {
+			"navigationBarTitleText": "Check Out",
+			"enablePullDownRefresh": true,
+			"usingComponents": {}
+		}
+	}, {
+		"path": "pages/account/index",
+		"style": {
+			"navigationBarTitleText": "Account",
+			"enablePullDownRefresh": true,
+			"usingComponents": {}
+		}
+	}, {
+		"path": "pages/category/furniture-list",
+		"style": {
+			"navigationBarTitleText": "Category",
+			"enablePullDownRefresh": true,
+			"usingComponents": {
+				"furniture-item": "/components/furniture-item/furniture-item"
+			}
+		}
+	}, {
+		"path": "pages/furniture-detail/index",
+		"style": {
+			"navigationBarTitleText": "Detail",
+			"enablePullDownRefresh": false,
+			"usingComponents": {}
+		}
+	}, {
+		"path": "pages/account/detail",
+		"style": {
+			"navigationBarTitleText": "Account Detail",
+			"enablePullDownRefresh": false,
+			"usingComponents": {}
+		}
+	}, {
+		"path": "pages/account/wish-list",
+		"style": {
+			"navigationBarTitleText": "Wish List",
+			"enablePullDownRefresh": false,
+			"usingComponents": {}
+		}
+	}, {
+		"path": "pages/account/orders",
+		"style": {
+			"navigationBarTitleText": "Orders",
+			"enablePullDownRefresh": false,
+			"usingComponents": {}
+		}
+	}, {
+		"path": "pages/account/address",
+		"style": {
+			"navigationBarTitleText": "Address",
+			"enablePullDownRefresh": false,
+			"usingComponents": {}
+		}
+	}, {
+		"path": "pages/account/address-edit",
+		"style": {
+			"navigationBarTitleText": "Address Edit",
 			"enablePullDownRefresh": false,
 			"usingComponents": {}
 		}
@@ -34,10 +123,20 @@
 			"iconPath": "static/icons/tabBar/main.png",
 			"selectedIconPath": "static/icons/tabBar/main-active.png"
 		}, {
-			"pagePath": "pages/search/index",
+			"pagePath": "pages/category/index",
 			"text": "",
-			"iconPath": "static/icons/tabBar/search.png",
-			"selectedIconPath": "static/icons/tabBar/search-active.png"
+			"iconPath": "static/icons/tabBar/menu.png",
+			"selectedIconPath": "static/icons/tabBar/menu-active.png"
+		}, {
+			"pagePath": "pages/purchase/index",
+			"text": "",
+			"iconPath": "static/icons/tabBar/purchase.png",
+			"selectedIconPath": "static/icons/tabBar/purchase-active.png"
+		}, {
+			"pagePath": "pages/account/index",
+			"text": "",
+			"iconPath": "static/icons/tabBar/user.png",
+			"selectedIconPath": "static/icons/tabBar/user-active.png"
 		}]
 	}
 }

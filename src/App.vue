@@ -11,8 +11,8 @@
             console.log('App Hide')
         },
 		globalData: {
-			test: ''
-		}
+            
+        }
     }
 </script>
 

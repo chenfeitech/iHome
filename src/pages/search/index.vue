@@ -19,7 +19,7 @@
       </view>
       <view
         class="search-menu"
-        @click="triggerSearchMenu"
+        @click="showSearchMenu"
         v-if="!isFocus && params.keyword">
         <image class="search-icon" src="../../static/icons/tabBar/menu.png"></image>
       </view>
@@ -153,7 +153,6 @@ export default {
   data() {
     return {
       isFocus: false,
-      isUniDrawerShow: false,
       placeholder: "简约蓝",
       colors: ['#E73E46', '#B37E41', '#78452E', '#59ADFF', '#F8C822', '#90C418', '#686868', '#B5E742', '#000000'],
       styles: ['简约', '时尚', '清新', '暗黑', '欧式'],
@@ -248,14 +247,8 @@ export default {
       }
       console.log(params)
     },
-    triggerSearchMenu() {
-      if(this.isUniDrawerShow) {
-        this.isUniDrawerShow = false
-        this.$refs.uniDrawer.close()
-      } else {
-        this.isUniDrawerShow = true
-        this.$refs.uniDrawer.open()
-      }
+    showSearchMenu() {
+      this.$refs.uniDrawer.open()
     },
     sliderChangeMin({ detail }) {
       this.params.minPrice = detail.value;

@@ -89,9 +89,10 @@ export default {
         }
     },
     onLoad(obj) {
-        let index = obj && obj.deliveryIndex || 0
+        let index = obj && obj.deliveryIndex || 0,
+            orderId = obj && obj.orderId || null;
         this.getDeliveryInfo(index);
-        this.getOrderDetail();
+        this.getOrderDetail(orderId);
     },
     methods: {
         getDeliveryInfo(index) {
@@ -124,7 +125,7 @@ export default {
                 url: '/pages/account/address?fromCheckout=true'
             })
         },
-        getOrderDetail() {
+        getOrderDetail(orderId) {
             this.goodList = [
                 {
                     id: "001",
